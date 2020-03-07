@@ -13,17 +13,17 @@
 
     <header class="header">
       <h4 class="header__logo header__logo_theme_light">NewsAnalyzer</h4>
-      <div class="header__page-switcher">
+      <nav class="header__page-switcher">
         <a href="./index.html" class="page-switcher__link_theme_light page-switcher__link_active link">Главная</a>
-          <a href="./about.html" class="page-switcher__link_theme_light page-switcher__link link">О проекте</a>
-      </div>
+        <a href="./about.html" class="page-switcher__link_theme_light page-switcher__link link">О проекте</a>
+      </nav>
     </header>
 
     <section class="search">
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
       <form action="#" class="search__field">
-        <input type="text" class="search__input" placeholder="Введите тему новости" maxlength="45">
+        <input type="text" class="search__input" placeholder="Введите тему новости" minlength="3" maxlength="45" required>
         <button type="submit" class="search__button">Искать</button>
       </form>
       <img src="<%=require('./images/search__bg.jpg')%>" alt="здесь должна быть картинка :(" class="search__image">
@@ -50,8 +50,10 @@
           <h2 class="result__title">Результаты поиска</h2>
           <a href="./analytics.html" class="result__link link">Посмотреть аналитику</a>
         </div>
-        <div class="result__cards">
-          <div class="result__card">
+
+        <article class="result__cards">
+
+          <article class="result__card">
             <a href="#" class="card__link  link"></a>
             <div class="card__image-ratio">
               <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -60,8 +62,9 @@
             <h4 class="card__title">Национальное достояние – парки</h4>
             <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
             <p class="card__caption">Лента.ру</p>
-          </div>
-          <div class="result__card">
+          </article>
+
+          <article class="result__card">
             <a href="#" class="card__link  link"></a>
             <div class="card__image-ratio">
               <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -70,8 +73,9 @@
             <h4 class="card__title">Национальное достояние – парки</h4>
             <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
             <p class="card__caption">Лента.ру</p>
-          </div>
-          <div class="result__card">
+          </article>
+
+          <article class="result__card">
             <a href="#" class="card__link  link"></a>
             <div class="card__image-ratio">
               <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -80,9 +84,11 @@
             <h4 class="card__title">Национальное достояние – парки</h4>
             <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
             <p class="card__caption">Лента.ру</p>
-          </div>
+          </article>
+
           <div class="more__cards">
-            <div class="result__card">
+
+            <article class="result__card">
               <a href="#" class="card__link  link"></a>
               <div class="card__image-ratio">
                 <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -91,8 +97,9 @@
               <h4 class="card__title">Национальное достояние – парки</h4>
               <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
               <p class="card__caption">Лента.ру</p>
-            </div>
-            <div class="result__card">
+            </article>
+
+            <article class="result__card">
               <a href="#" class="card__link  link"></a>
               <div class="card__image-ratio">
                 <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -101,8 +108,9 @@
               <h4 class="card__title">Национальное достояние – парки</h4>
               <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
               <p class="card__caption">Лента.ру</p>
-            </div>
-            <div class="result__card">
+            </article>
+
+            <article class="result__card">
               <a href="#" class="card__link  link"></a>
               <div class="card__image-ratio">
                 <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
@@ -111,9 +119,10 @@
               <h4 class="card__title">Национальное достояние – парки</h4>
               <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
               <p class="card__caption">Лента.ру</p>
-            </div>
-          </div>
-        </div>
+            </article>
+
+          </article>
+        </article>
         <button class="result__button" id="showMore">Показать еще</button>
       </div>
     </section>
@@ -135,15 +144,15 @@
 
     <footer class="footer">
       <p class="footer__copyright">©2020 QUNIX</p>
-      <div class="footer__container footer__container_first">
+      <nav class="footer__container footer__container_first">
         <a href="./index.html" class="footer__link link">Главная</a>
         <a href="./about.html" class="footer__link link">О проекте</a>
         <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link link">Яндекс.Практикум</a>
-      </div>
-      <div class="footer__container footer__container_second">
+      </nav>
+      <nav class="footer__container footer__container_second">
         <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/github.svg')%>" alt="GitHub" class="footer__icon"></a>
         <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/vk.svg')%>" alt="VK" class="footer__icon"></a>
-      </div>
+      </nav>
     </footer>
 
   </div>
