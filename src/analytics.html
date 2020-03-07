@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>News Analyzer</title>
+  <link href="<%=require('./images/favicon.ico')%>" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+</head>
+<body>
+  <div class="root">
+
+    <header class="header">
+      <h4 class="header__logo header__logo_theme_dark">NewsAnalyzer</h4>
+      <div class="header__page-switcher">
+        <a href="./index.html" class="page-switcher__link_theme_dark page-switcher__link link">Главная</a>
+          <a href="./about.html" class="page-switcher__link_theme_dark page-switcher__link link">О проекте</a>
+      </div>
+    </header>
+
+    <section class="report">
+      <p class="report__path">
+        <a href="./index.html" class="path__main link">Главная</a> / Аналитика
+      </p>
+      <h1 class="report__title">Вы спросили: «Путешествия»</h1>
+      <p class="report__info report__news">Новостей за неделю: <span class="report__info_bold">34 324</span></p>
+      <p class="report__info report__mention">Упоминаний в загаловках: <span class="report__info_bold">235</span></p>
+
+      <div class="report__chart">
+        <h2 class="chart__title">Аналитика по дням</h2>
+
+        <div class="chart__two-columns">
+
+          <div class="chart__column">
+            <p class="chart__data">Дата (август)</p>
+            <ul class="chart__days">
+              <li class="days__item">19, пн</li>
+              <li class="days__item">20, вт</li>
+              <li class="days__item">21, ср</li>
+              <li class="days__item">22, чт</li>
+              <li class="days__item">23, пт</li>
+              <li class="days__item">24, сб</li>
+              <li class="days__item">25, вс</li>
+            </ul>
+          </div>
+
+          <div class="chart__column">
+            <p class="chart__label">Кол-во упоминаний</p>
+            <ul class="chart__numbers">
+              <li class="numbers__item">0</li>
+              <li class="numbers__item">25</li>
+              <li class="numbers__item">50</li>
+              <li class="numbers__item">75</li>
+              <li class="numbers__item">100</li>
+            </ul>
+            <ul class="chart__bars">
+              <li class="bars__item">15</li>
+              <li class="bars__item">18</li>
+              <li class="bars__item">11</li>
+              <li class="bars__item">39</li>
+              <li class="bars__item">45</li>
+              <li class="bars__item">73</li>
+              <li class="bars__item">34</li>
+            </ul>
+            <ul class="chart__numbers">
+              <li class="numbers__item">0</li>
+              <li class="numbers__item">25</li>
+              <li class="numbers__item">50</li>
+              <li class="numbers__item">75</li>
+              <li class="numbers__item">100</li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">©2020 QUNIX</p>
+      <div class="footer__container footer__container_first">
+        <a href="./index.html" class="footer__link link">Главная</a>
+        <a href="./about.html" class="footer__link link">О проекте</a>
+        <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link link">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__container footer__container_second">
+        <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/github.svg')%>" alt="GitHub" class="footer__icon"></a>
+        <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/vk.svg')%>" alt="VK" class="footer__icon"></a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+</html>

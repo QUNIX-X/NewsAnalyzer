@@ -1,0 +1,19 @@
+@import url('./__button/search__button.css');
+@import url('./__input/search__input.css');
+
+.search__field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 666px) {
+  .search__field {
+    flex-direction: row;
+  }
+}

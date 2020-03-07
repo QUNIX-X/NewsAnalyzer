@@ -1,0 +1,20 @@
+.card__image {
+  min-height: 100%;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.card__image-ratio {
+  margin: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 68%;
+}

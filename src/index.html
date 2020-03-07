@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>News Analyzer</title>
+  <link href="<%=require('./images/favicon.ico')%>" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+  <div class="root">
+
+    <header class="header">
+      <h4 class="header__logo header__logo_theme_light">NewsAnalyzer</h4>
+      <div class="header__page-switcher">
+        <a href="./index.html" class="page-switcher__link_theme_light page-switcher__link_active link">Главная</a>
+          <a href="./about.html" class="page-switcher__link_theme_light page-switcher__link link">О проекте</a>
+      </div>
+    </header>
+
+    <section class="search">
+      <h1 class="search__title">Что в мире творится?</h1>
+      <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+      <form action="#" class="search__field">
+        <input type="text" class="search__input" placeholder="Введите тему новости" maxlength="45">
+        <button type="submit" class="search__button">Искать</button>
+      </form>
+      <img src="<%=require('./images/search__bg.jpg')%>" alt="здесь должна быть картинка :(" class="search__image">
+      <div class="search__cover"></div>
+    </section>
+
+    <section class="result">
+
+      <div class="result__loading">
+        <div class="loading__spinner">
+          <div class="loading__inner"></div>
+        </div>
+        <p class="loading__text">Идет поиск новостей...</p>
+      </div>
+
+      <div class="result__not-found">
+          <img src="<%=require('./images/not-found.svg')%>" alt=":(" class="not-found__image">
+        <h3 class="not-found__title">Ничего не найдено</h3>
+        <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
+      </div>
+
+      <div class="result__found">
+        <div class="result__row">
+          <h2 class="result__title">Результаты поиска</h2>
+          <a href="./analytics.html" class="result__link link">Посмотреть аналитику</a>
+        </div>
+        <div class="result__cards">
+          <div class="result__card">
+            <a href="#" class="card__link  link"></a>
+            <div class="card__image-ratio">
+              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
+            </div>
+            <p class="card__time">2 августа 2019</p>
+            <h4 class="card__title">Национальное достояние – парки</h4>
+            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+            <p class="card__caption">Лента.ру</p>
+          </div>
+          <div class="result__card">
+            <a href="#" class="card__link  link"></a>
+            <div class="card__image-ratio">
+              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
+            </div>
+            <p class="card__time">2 августа 2019</p>
+            <h4 class="card__title">Национальное достояние – парки</h4>
+            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+            <p class="card__caption">Лента.ру</p>
+          </div>
+          <div class="result__card">
+            <a href="#" class="card__link  link"></a>
+            <div class="card__image-ratio">
+              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
+            </div>
+            <p class="card__time">2 августа 2019</p>
+            <h4 class="card__title">Национальное достояние – парки</h4>
+            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+            <p class="card__caption">Лента.ру</p>
+          </div>
+          <div class="more__cards">
+            <div class="result__card">
+              <a href="#" class="card__link  link"></a>
+              <div class="card__image-ratio">
+                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
+              </div>
+              <p class="card__time">2 августа 2019</p>
+              <h4 class="card__title">Национальное достояние – парки</h4>
+              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+              <p class="card__caption">Лента.ру</p>
+            </div>
+            <div class="result__card">
+              <a href="#" class="card__link  link"></a>
+              <div class="card__image-ratio">
+                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
+              </div>
+              <p class="card__time">2 августа 2019</p>
+              <h4 class="card__title">Национальное достояние – парки</h4>
+              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+              <p class="card__caption">Лента.ру</p>
+            </div>
+            <div class="result__card">
+              <a href="#" class="card__link  link"></a>
+              <div class="card__image-ratio">
+                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
+              </div>
+              <p class="card__time">2 августа 2019</p>
+              <h4 class="card__title">Национальное достояние – парки</h4>
+              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
+              <p class="card__caption">Лента.ру</p>
+            </div>
+          </div>
+        </div>
+        <button class="result__button" id="showMore">Показать еще</button>
+      </div>
+    </section>
+
+    <section class="author-about">
+      <div class="author-about__two-columns">
+        <img src="<%=require('./images/avatar.jpg')%>" alt="здесь должна быть картинка :(" class="author-about__avatar">
+        <div class="author-about__second-column">
+          <h2 class="author-about__title">Об авторе</h2>
+          <p class="author-about__text">
+            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="author-about__text">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">©2020 QUNIX</p>
+      <div class="footer__container footer__container_first">
+        <a href="./index.html" class="footer__link link">Главная</a>
+        <a href="./about.html" class="footer__link link">О проекте</a>
+        <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link link">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__container footer__container_second">
+        <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/github.svg')%>" alt="GitHub" class="footer__icon"></a>
+        <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/vk.svg')%>" alt="VK" class="footer__icon"></a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

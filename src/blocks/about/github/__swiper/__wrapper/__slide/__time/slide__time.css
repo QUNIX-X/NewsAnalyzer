@@ -1,0 +1,16 @@
+.slide__time {
+  margin: 16px auto 8px 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 600px) {
+  .slide__time {
+    margin: 24px auto 16px 24px;
+  }
+}

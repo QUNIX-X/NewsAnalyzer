@@ -1,0 +1,36 @@
+.author-about__avatar {
+  border-radius: 50%;
+  width: 272px;
+  height: 272px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 550px) {
+  .author-about__avatar {
+    margin: auto 0;
+    width: 232px;
+    height: 232px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .author-about__avatar {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .author-about__avatar {
+    width: 364px;
+    height: 364px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .author-about__avatar {
+    width: 464px;
+    height: 464px;
+  }
+}

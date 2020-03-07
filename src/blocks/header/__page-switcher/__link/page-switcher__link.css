@@ -1,0 +1,7 @@
+@import url('./_active/page-switcher__link_active.css');
+@import url('./_theme_dark/page-switcher__link_theme_dark.css');
+@import url('./_theme_light/page-switcher__link_theme_light.css');
+
+.page-switcher__link {
+  color: #B6BCBF;
+}

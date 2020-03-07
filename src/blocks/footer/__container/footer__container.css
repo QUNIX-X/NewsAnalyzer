@@ -1,0 +1,7 @@
+@import url('./__link/footer__link.css');
+@import url('./_first/footer__container_first.css');
+@import url('./_second/footer__container_second.css');
+
+.footer__container {
+  display: flex;
+}

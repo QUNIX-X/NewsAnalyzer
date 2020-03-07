@@ -1,0 +1,34 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+@import url('../blocks/link/link.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/main/search/search.css');
+@import url('../blocks/main/result/result.css');
+@import url('../blocks/author-about/author-about.css');
+@import url('../blocks/footer/footer.css');
+
+body {
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0px auto 0px auto;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 450px) {
+  .root {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .root {
+    padding: 0 105px;
+  }
+}

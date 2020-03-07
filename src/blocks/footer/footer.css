@@ -1,0 +1,15 @@
+@import url('./__container/footer__container.css');
+@import url('./__copyright/footer__copyright.css');
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 224px;
+}
+
+@media screen and (min-width: 700px) {
+  .footer {
+    height: 22px;
+    padding: 29px 0;
+  }
+}

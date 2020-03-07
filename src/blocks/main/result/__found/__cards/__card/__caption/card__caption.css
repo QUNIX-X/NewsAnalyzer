@@ -1,0 +1,26 @@
+.card__caption {
+  width: 88%;
+  padding-top: auto;
+  margin: 10px auto 20px auto;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 450px) {
+  .card__caption {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card__caption {
+    margin-bottom: 24px;
+  }
+}

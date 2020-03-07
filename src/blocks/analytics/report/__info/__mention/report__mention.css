@@ -1,0 +1,9 @@
+.report__mention {
+  margin: 4px 0 24px 0;
+}
+
+@media screen and (min-width: 500px) {
+  .report__mention {
+    margin-bottom: 40px;
+  }
+}

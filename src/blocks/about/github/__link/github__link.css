@@ -1,0 +1,62 @@
+.github__link {
+  position: relative;
+  margin: -10px auto 32px;
+  padding: 16px 69px;
+  border: 1px solid #1A1B22;
+  border-radius: 80px;
+  order: 1;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+
+  transition: ease-out 0.3s;
+}
+
+.github__link:active {
+  color: #fff;
+  background: #1A1B22;
+}
+
+
+@media screen and (min-width: 500px) {
+  .github__link {
+    margin: auto 0 auto auto;
+    padding: 0;
+    border: none;
+    border-radius: none;
+    order: 0;
+  }
+
+  .github__link:active {
+    color: #1A1B22;
+    background: none;
+  }
+
+  .github__link:hover {
+    opacity: 0.3;
+  }
+
+  .github__link::before,
+  .github__link::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    right: -15px;
+    background-color: #1A1B22;
+  }
+
+  .github__link::before {
+    top: 13px;
+    transform: rotate(-45deg);
+  }
+
+  .github__link::after {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,6 @@
+@import url('./__column/chart__column.css');
+
+.chart__two-columns {
+  display: flex;
+  flex-wrap: nowrap;
+}

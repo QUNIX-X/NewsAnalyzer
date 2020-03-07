@@ -1,0 +1,21 @@
+@import url('./__item/numbers__item.css');
+
+.chart__numbers {
+  padding: 0;
+  margin: 16px 0 8px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.chart__numbers:last-child {
+  margin: 16px 0 0 0;
+}

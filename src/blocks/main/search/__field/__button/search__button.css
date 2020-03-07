@@ -1,0 +1,35 @@
+.search__button {
+  margin-top: 16px;
+  padding: 18px 16px;
+  z-index: 11;
+  background: #2F71E5;;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  cursor: pointer;
+  transition: background ease-out 0.2s;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search__button:hover {
+  background: #347EFF;
+}
+
+.search__button:active {
+  background: #2A65CC;
+}
+
+@media screen and (min-width: 666px) {
+  .search__button {
+    margin-top: 0;
+    margin-left: -157px;
+    padding: 0;
+    width: 168px;
+  }
+}

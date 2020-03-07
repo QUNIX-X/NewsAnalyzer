@@ -1,0 +1,13 @@
+@import url('./__image/slide__image.css');
+@import url('./__row/slide__row.css');
+
+.slide__two-rows {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .slide__two-rows {
+    margin-bottom: 22px;
+  }
+}

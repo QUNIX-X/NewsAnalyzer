@@ -1,0 +1,44 @@
+.result__link {
+  position: relative;
+  margin: auto auto 36px 0;
+  height: min-content;
+  text-align: left;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  transition: ease-out 0.3s;
+}
+
+.result__link:hover {
+  opacity: 0.8;
+}
+
+.result__link::before,
+.result__link::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  right: -15px;
+  background-color: black;
+}
+
+.result__link::before {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+
+.result__link::after {
+  top: 8.5px;
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 700px) {
+  .result__link {
+    margin: auto 1.2% 72px 0;
+    text-align: right;
+  }
+}

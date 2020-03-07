@@ -1,0 +1,18 @@
+@import url('./__text/info__text.css');
+@import url('./__title/info__title.css');
+
+.info {
+  margin: 16px 0 16px 0;
+}
+
+@media screen and (min-width: 500px) {
+  .info {
+    margin: 30px 0 50px 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .info {
+    margin: 80px 0 94px 0;
+  }
+}

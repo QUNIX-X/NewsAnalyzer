@@ -1,0 +1,15 @@
+.chart__label {
+  margin: 0;
+
+  padding-bottom: 24px;
+  border-bottom: 1px solid #1A1B22;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}

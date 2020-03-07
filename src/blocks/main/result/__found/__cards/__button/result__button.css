@@ -1,0 +1,21 @@
+.result__button {
+  margin: 64px auto 0 auto;
+  padding-left: 84px;
+  padding-right: 84px;
+  height: 64px;
+  border: none;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 80px;
+  transition: opacity ease-out 0.3s;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.result__button:hover {
+  opacity: 0.9;
+}

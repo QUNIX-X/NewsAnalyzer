@@ -1,0 +1,28 @@
+@import url('./__text/slide__text.css');
+@import url('./__two-rows/slide__two-rows.css');
+@import url('./__time/slide__time.css');
+
+.swiper-slide {
+  position: relative;
+  flex-basis: 288px;
+  height: 264px;
+  z-index: 99;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+}
+
+@media screen and (min-width: 600px) {
+  .swiper-slide {
+    flex-basis: 336px;
+    height: 242px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .swiper-slide {
+    flex-basis: 400px;
+    height: 288px;
+  }
+}

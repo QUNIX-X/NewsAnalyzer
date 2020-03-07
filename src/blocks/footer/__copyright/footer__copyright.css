@@ -1,0 +1,18 @@
+.footer__copyright {
+  margin: 27.5px 50% 0 0;
+  order: 1;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__copyright {
+    margin: 0;
+    order: 0;
+  }
+}

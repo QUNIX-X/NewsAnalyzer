@@ -1,0 +1,25 @@
+@import url('./__title/chart__titile.css');
+@import url('./__two-columns/chart__two-columns.css');
+
+.report__chart {
+  position: relative;
+  background: #F5F6F7;
+  padding-bottom: 40px;
+}
+
+.report__chart::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1440px;
+  top: 0;
+  left: -105px;
+  z-index: -11;
+  background: #F5F6F7;
+}
+
+@media screen and (min-width: 900px) {
+  .report__chart {
+    padding-bottom: 80px;
+  }
+}

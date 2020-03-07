@@ -1,0 +1,16 @@
+.page-switcher__link_active {
+  padding-bottom: 15.5px;
+  border-bottom: 3px solid;
+}
+
+@media screen and (min-width: 500px) {
+  .page-switcher__link_active {
+    padding-bottom: 17px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .page-switcher__link_active {
+    padding-bottom: 25px;
+  }
+}

@@ -1,1 +1,2 @@
-# NewsAnalyzer
+# News Analyzer
+#
