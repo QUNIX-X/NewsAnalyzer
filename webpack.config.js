@@ -26,7 +26,7 @@ module.exports = {
                 use: { loader: "babel-loader" },
             },
             {
-                test: /\.css$/i,
+                test: /\.css$/,
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader',
@@ -64,7 +64,7 @@ module.exports = {
             jQuery: "jquery"
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: './pages/style.[contenthash].css',
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -80,16 +80,16 @@ module.exports = {
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
-          inject: false,
-          template: './src/about.html',
-          filename: 'about.html',
-          chunks: ['about', 'swiper']
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html',
+            chunks: ['about', 'swiper']
         }),
         new HtmlWebpackPlugin({
-          inject: false,
-          template: './src/analytics.html',
-          filename: 'analytics.html',
-          chunks: ['analytics']
+            inject: false,
+            template: './src/analytics.html',
+            filename: 'analytics.html',
+            chunks: ['analytics']
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
