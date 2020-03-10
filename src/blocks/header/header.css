@@ -1,0 +1,33 @@
+@import url('./__logo/header__logo.css');
+@import url('./__page-switcher/header__page-switcher.css');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.header::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  box-shadow: inset 0px -1px 0px rgba(209, 210, 214, 0.5);
+}
+
+@media screen and (min-width: 500px) {
+  .header,
+  .header::after {
+    height: 64px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header,
+  .header::after {
+    height: 80px;
+  }
+}

@@ -1,0 +1,15 @@
+@import url('./__path/report__path.css');
+@import url('./__title/report__title.css');
+@import url('./__info/report__info.css');
+@import url('./__chart/report__chart.css');
+
+
+.report {
+  margin: 16px 0 0 0;
+}
+
+@media screen and (min-width: 500px) {
+  .report {
+    margin-top: 32px;
+  }
+}

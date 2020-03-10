@@ -1,0 +1,19 @@
+@import url('./_theme_dark/header__logo_theme_dark.css');
+@import url('./_theme_light/header__logo_theme_light.css');
+
+.header__logo {
+  margin: auto 0;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 500px) {
+  .header__logo {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

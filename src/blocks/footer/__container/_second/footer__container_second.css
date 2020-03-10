@@ -1,0 +1,9 @@
+.footer__container_second {
+  margin: 22px 0 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__container_second {
+    margin: 0;
+  }
+}

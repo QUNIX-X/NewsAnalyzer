@@ -1,0 +1,23 @@
+@import url('./__image/tech__image.css');
+@import url('./__name/tech__name.css');
+
+.tech__item {
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 450px) {
+  .tech__item {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .tech__item {
+    margin: 0 40px 0 0;
+  }
+
+  .tech__item:last-child {
+    margin: 0;
+  }
+}
+

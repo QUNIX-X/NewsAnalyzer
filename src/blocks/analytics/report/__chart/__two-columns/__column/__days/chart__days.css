@@ -1,0 +1,7 @@
+@import url('./__item/days__item.css');
+
+.chart__days {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

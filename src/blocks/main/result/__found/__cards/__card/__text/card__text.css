@@ -1,0 +1,35 @@
+.card__text {
+  margin: 0 auto auto auto;
+  width: 88%;
+  min-height: 88px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+}
+
+.ellip {
+  display: block;
+  max-height: 110px;
+}
+
+.ellip-line {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.more__cards {
+  display: none;
+}

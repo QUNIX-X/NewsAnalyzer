@@ -1,0 +1,26 @@
+@import url('./__list/tech__list.css');
+@import url('./__title/tech__title.css');
+
+.tech {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech::before {
+  content: '';
+  position: absolute;
+  z-index: -11;
+  width: 1500px;
+  top: 0;
+  left: -120px;
+  right: 0;
+  bottom: 0;
+  background: #F5F6F7;
+}
+
+@media screen and (min-width: 1100px) {
+  .tech {
+    flex-direction: row;
+  }
+}

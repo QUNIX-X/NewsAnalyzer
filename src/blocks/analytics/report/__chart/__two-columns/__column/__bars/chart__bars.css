@@ -1,0 +1,11 @@
+@import url('./__item/bars__item.css');
+
+.chart__bars {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+
+}

@@ -1,0 +1,6 @@
+@import url('./__email/slide__email.css');
+@import url('./__name/slide__name.css');
+
+.slide__row {
+  margin: auto 0;
+}

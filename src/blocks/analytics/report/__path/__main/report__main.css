@@ -1,0 +1,8 @@
+.path__main {
+  color: #1A1B22;
+  transition: opacity ease-out 0.3s;
+}
+
+.path__main:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,15 @@
+.slide__image {
+  margin: 0 12px 0 16px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .slide__image {
+    margin: 0 16px 0 24px;
+    width: 48px;
+    height: 48px;
+  }
+}

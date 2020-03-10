@@ -1,0 +1,19 @@
+@import url('./__main/report__main.css');
+
+.report__path {
+  display: none;
+  margin: 0 auto 64px 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 500px) {
+  .report__path {
+    display: block;
+  }
+}

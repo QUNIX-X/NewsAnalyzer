@@ -1,0 +1,12 @@
+@import url('./__mention/report__mention.css');
+@import url('./__news/report__news.css');
+@import url('./_bold/report__info_bold.css');
+
+.report__info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}

@@ -1,0 +1,11 @@
+.info__title {
+  width: 60%;
+  margin: 0 auto 24px 0;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}

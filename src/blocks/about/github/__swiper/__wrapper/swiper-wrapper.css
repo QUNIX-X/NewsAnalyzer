@@ -1,0 +1,7 @@
+@import url('./__slide/swiper-slide.css');
+
+.swiper-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

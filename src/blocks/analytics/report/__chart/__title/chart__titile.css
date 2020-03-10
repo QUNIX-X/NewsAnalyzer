@@ -1,0 +1,23 @@
+.chart__title {
+  padding-top: 24px;
+  margin: 0 auto 16px 0;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  .chart__title {
+    padding-top: 40px;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .chart__title {
+    padding-top: 80px;
+  }
+}

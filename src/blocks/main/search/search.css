@@ -1,0 +1,31 @@
+@import url('./__cover/search__cover.css');
+@import url('./__field/search__field.css');
+@import url('./__image/search__image.css');
+@import url('./__subtitle/searsh__subtitle.css');
+@import url('./__title/search__title.css');
+
+.search {
+  margin: 30px auto 30px auto;
+  padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .search {
+    padding: 0 15%;
+    margin: 40px auto 40px auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .search {
+    width: 70%;
+    padding: 0;
+    margin: 80px auto 80px auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search {
+    width: 50%;
+  }
+}

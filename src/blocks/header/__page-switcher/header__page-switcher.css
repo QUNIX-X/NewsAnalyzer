@@ -1,0 +1,21 @@
+@import url('./__link/page-switcher__link.css');
+
+.header__page-switcher {
+  padding: 0;
+  margin: auto 0;
+
+  white-space: nowrap;
+  list-style-type: none;
+  text-align: right;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 500px) {
+  .header__page-switcher {
+    font-size: 18px;
+  }
+}

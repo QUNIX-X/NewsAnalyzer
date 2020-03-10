@@ -1,0 +1,25 @@
+.card__title {
+  margin: 2.08% auto 16px auto;
+  width: 88%;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1A1B22;
+}
+
+@media screen and (min-width: 450px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card__title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}

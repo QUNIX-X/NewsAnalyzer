@@ -1,0 +1,24 @@
+.report__title {
+  margin: 0 auto 24px 0;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  color: #1A1B22;
+}
+
+@media screen and (min-width: 500px) {
+  .report__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .report__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

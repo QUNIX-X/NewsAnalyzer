@@ -1,0 +1,12 @@
+@import url('./__link/result__link.css');
+@import url('./__title/result__title.css');
+
+.result__row {
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .result__row {
+    display: flex;
+  }
+}

@@ -1,0 +1,17 @@
+.page-switcher__link_theme_dark {
+  color: #1A1B22;
+}
+
+.page-switcher__link_theme_dark:hover {
+  color: #1A1B22;
+}
+
+.page-switcher__link_theme_dark:last-child {
+  margin-left: 11px;
+}
+
+@media screen and (min-width: 500px) {
+  .page-switcher__link_theme_dark:last-child {
+    margin-left: 34px;
+  }
+}

@@ -1,0 +1,14 @@
+@import url('./__label/chart__label.css');
+@import url('./__data/chart__data.css');
+@import url('./__numbers/chart__numbers.css');
+@import url('./__days/chart__days.css');
+@import url('./__bars/chart__bars.css');
+
+.chart__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart__column:last-child {
+  width: 91.71%;
+}

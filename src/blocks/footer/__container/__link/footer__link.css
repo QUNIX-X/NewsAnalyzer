@@ -1,0 +1,33 @@
+@import url('./__icon/footer__icon.css');
+
+.footer__link {
+  margin: 0;
+
+  font-family:  Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 48px;
+  color: #1A1B22;
+  transition: opacity ease-out 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+}
+
+.footer__link_type_icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__link_type_icon:last-child {
+  margin-left: 28px;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__link {
+    line-height: 24px;
+  }
+}

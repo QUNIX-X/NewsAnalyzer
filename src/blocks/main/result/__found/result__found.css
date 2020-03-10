@@ -1,0 +1,7 @@
+@import url('./__row/result__row.css');
+@import url('./__cards/result__cards.css');
+
+.result__found {
+  display: flex;
+  flex-direction: column;
+}

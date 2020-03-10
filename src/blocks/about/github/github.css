@@ -1,0 +1,23 @@
+@import url('./__title/github__title.css');
+@import url('./__swiper/swiper.css');
+@import url('./__swiper/my-swiper.css');
+@import url('./__link/github__link.css');
+
+.github {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.github::before {
+  content: '';
+  position: absolute;
+  z-index: -11;
+  width: 1500px;
+  top: 0;
+  left: -120px;
+  right: 0;
+  bottom: 0;
+  background: #F5F6F7;
+}

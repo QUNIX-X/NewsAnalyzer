@@ -1,0 +1,18 @@
+.loading__inner {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 74px;
+  width: 37px;
+  overflow: hidden;
+}
+
+.loading__inner::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  height: 74px;
+  width: 74px;
+  background: linear-gradient(#f5f6f7, #88898d);
+}

@@ -1,0 +1,20 @@
+@import url('./__avatar/author-about__avatar.css');
+@import url('./__column/author-about__column.css');
+
+.author-about {
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.author-about::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -120px;
+  right: 0;
+  bottom: 0;
+  width: 1500px;
+  background-color: #fff;
+}

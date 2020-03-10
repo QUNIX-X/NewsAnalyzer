@@ -1,0 +1,22 @@
+@import url('./__found/result__found.css');
+@import url('./__loading/result__loading.css');
+@import url('./__not-found/result__not-found.css');
+
+.result {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.result::after {
+  content:  '';
+  position: absolute;
+  z-index: -11;
+  width: 1500px;
+  top: 0;
+  left: -120px;
+  right: 0;
+  bottom: 0;
+  background: #F5F6F7;
+}
