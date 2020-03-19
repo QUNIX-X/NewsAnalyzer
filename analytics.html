@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>News Analyzer</title>
+  <link href="./images/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="stylesheet" href="./pages/analytics.bundle.css">
+</head>
+<body>
+  <div class="root">
+
+    <header class="header">
+      <h4 class="header__logo header__logo_theme_dark">NewsAnalyzer</h4>
+      <nav class="header__page-switcher">
+        <a href="./index.html" class="page-switcher__link_theme_dark page-switcher__link link">Главная</a>
+          <a href="./about.html" class="page-switcher__link_theme_dark page-switcher__link link">О проекте</a>
+      </nav>
+    </header>
+
+    <section class="report">
+      <p class="report__path">
+        <a href="./index.html" class="path__main link">Главная</a> / Аналитика
+      </p>
+      <h1 class="report__title">Как ты сюда попал?</h1>
+      <p class="report__info">Новостей за неделю: <span class="report__info_bold report__news"></span></p>
+      <p class="report__info">Упоминаний в загаловках: <span class="report__info_bold report__mention"></span></p>
+
+      <div class="report__chart">
+        <h2 class="chart__title">Аналитика по дням</h2>
+
+        <div class="chart__two-columns">
+
+          <div class="chart__column">
+            <p class="chart__data"></p>
+            <ul class="chart__days">
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+              <li class="days__item"></li>
+            </ul>
+          </div>
+
+          <div class="chart__column">
+            <p class="chart__label">Кол-во упоминаний</p>
+            <ul class="chart__numbers">
+              <li class="numbers__item">0</li>
+              <li class="numbers__item">25</li>
+              <li class="numbers__item">50</li>
+              <li class="numbers__item">75</li>
+              <li class="numbers__item">100</li>
+            </ul>
+            <ul class="chart__bars">
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+              <li class="bars__item">
+                <p class="item__number"></p>
+              </li>
+            </ul>
+            <ul class="chart__numbers">
+              <li class="numbers__item">0</li>
+              <li class="numbers__item">25</li>
+              <li class="numbers__item">50</li>
+              <li class="numbers__item">75</li>
+              <li class="numbers__item">100</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">©2020 QUNIX</p>
+      <nav class="footer__container footer__container_first">
+        <a href="./index.html" class="footer__link link">Главная</a>
+        <a href="./about.html" class="footer__link link">О проекте</a>
+        <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link link">Яндекс.Практикум</a>
+      </nav>
+      <nav class="footer__container footer__container_second">
+        <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img src="./images/github.svg" alt="GitHub" class="footer__icon"></a>
+        <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img src="./images/vk.svg" alt="VK" class="footer__icon"></a>
+      </nav>
+    </footer>
+
+  </div>
+  <script src="analytics.bundle.js"></script>
+</body>
+</html>
