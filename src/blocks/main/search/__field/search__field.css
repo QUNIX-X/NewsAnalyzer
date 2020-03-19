@@ -1,11 +1,13 @@
 @import url('./__button/search__button.css');
 @import url('./__input/search__input.css');
+@import url('./__error/search__error.css');
 
 .search__field {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

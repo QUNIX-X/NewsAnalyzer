@@ -4,10 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
     centeredSlides: true,
     spaceBetween: 8,
     grabCursor: true,
-    slidesPerGroup: 1,
-    slideToClickedSlide: true,
     centeredSlides: true,
-    centeredSlidesBounds: false,
     preventClicks: true,
     preventClicksPropagation: false,
     navigation: {
@@ -19,15 +16,39 @@ window.addEventListener('DOMContentLoaded', function() {
       clickable: true,
     },
     breakpoints: {
+      345: {
+        slidesPerView: 1.17,
+      },
+      376: {
+        slidesPerView: 1.25,
+      },
       450: {
-        slidesPerView: 2,
+        slidesPerView: 1.35,
+      },
+      500: {
+        slidesPerView: 1.5,
       },
       600: {
-        slidesPerView: 3,
+        slidesPerView: 1.52,
         spaceBetween: 16,
+      },
+      700: {
+        slidesPerView: 1.77,
+      },
+      768: {
+        slidesPerView: 1.9,
+      },
+      950: {
+        slidesPerView: 2.2,
+      },
+      1100: {
+        slidesPerView: 3,
       }
     }
   });
+  setTimeout(function () {
+    swiper.update();
+   }, 1500);
 });
 
 

@@ -2,12 +2,10 @@
   width: 88%;
   margin: 3.47% auto 0 auto;
 
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: #B6BCBF;
 }
-
-@media screen and (min-width: 800)

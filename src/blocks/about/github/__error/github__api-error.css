@@ -1,0 +1,12 @@
+@import url('./__text/api-error__text.css');
+@import url('./__title/api-error__title.css');
+
+.github__api-error {
+  display: none;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 60px auto;
+  text-align: center;
+}

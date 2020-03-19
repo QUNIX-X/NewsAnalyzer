@@ -4,6 +4,7 @@
   height: 272px;
   margin: 0 auto;
   object-fit: cover;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 @media screen and (min-width: 550px) {

@@ -1,17 +1,7 @@
+@import url('./__number/item__number.css');
+
 .bars__item {
   width: auto;
-  padding-left: 6px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  color: #FFFFFF;
   background: #2F71E5;
 }
 

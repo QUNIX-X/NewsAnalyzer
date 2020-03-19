@@ -3,7 +3,7 @@
   width: 88%;
   min-height: 88px;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -13,7 +13,7 @@
 
 .ellip {
   display: block;
-  max-height: 110px;
+  max-height: 120px;
 }
 
 .ellip-line {

@@ -9,14 +9,13 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
-      swiper: './src/js/swiper.js',
-      main: './src/js/index.js',
-      about: './src/js/about.js',
-      analytics: './src/js/analytics.js'
+      main: './src/pages/index.js',
+      about: './src/pages/about.js',
+      analytics: './src/pages/analytics.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './pages/[name].modules.js'
     },
     module: {
         rules: [
@@ -26,11 +25,15 @@ module.exports = {
                 use: { loader: "babel-loader" },
             },
             {
-                test: /\.css$/,
-                use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                    'css-loader',
-                    'postcss-loader'
+                test: /\.css$/i,
+                use: [{
+                  loader: MiniCssExtractPlugin.loader,
+                  options: {
+                    publicPath: '../',
+                  },
+                },
+                'css-loader',
+                'postcss-loader',
                 ]
             },
             {
@@ -53,7 +56,7 @@ module.exports = {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: './vendor/fonts/[name].[ext]',
+                    name: './vendor/[name].[ext]',
                 }
             }
         ]
@@ -64,7 +67,7 @@ module.exports = {
             jQuery: "jquery"
         }),
         new MiniCssExtractPlugin({
-            filename: './pages/style.[contenthash].css',
+            filename: './pages/[name].bundle.css',
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -77,19 +80,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
-            filename: 'index.html',
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about.html',
             filename: 'about.html',
-            chunks: ['about', 'swiper']
+            chunks: 'about'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics.html',
             filename: 'analytics.html',
-            chunks: ['analytics']
+            chunks: 'analytics'
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({

@@ -6,7 +6,7 @@
   border-radius: 80px;
   order: 1;
 
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -37,7 +37,7 @@
   }
 
   .github__link:hover {
-    opacity: 0.3;
+    opacity: 0.8;
   }
 
   .github__link::before,
