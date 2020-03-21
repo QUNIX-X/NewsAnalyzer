@@ -1,0 +1,9 @@
+@import url('./__spinner/loading__spinner.css');
+@import url('./__text/loading__text.css');
+
+.github__loading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}

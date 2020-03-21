@@ -1,8 +1,10 @@
-export default class Validate {
-  constructor(container, SEARCH_INPUT, SEARCH_BUTTON) {
+import CheckSearch from "../blocks/main/search/checkSearch";
+
+export default class Validate extends CheckSearch {
+  constructor(container,searchButton, searchInput) {
+    super(searchInput)
     this.container = container;
-    this.searchInput = SEARCH_INPUT;
-    this.searchButton = SEARCH_BUTTON;
+    this.searchButton = searchButton;
     this.inputValidate = this.inputValidate.bind(this);
     this.validate = this.validate.bind(this);
     this.searchInput.addEventListener('click', this.inputValidate);

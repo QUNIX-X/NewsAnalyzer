@@ -1,8 +1,8 @@
 export default class NewsApi {
-  constructor(options, DATE_FOR_API) {
+  constructor(options, dateForApi) {
     this._url = options.url;
     this._apiKey = options.apiKey;
-    this.dateForApi = DATE_FOR_API;
+    this.dateForApi = dateForApi;
     this.nowDate = this.dateForApi.nowDate;
     this.weekAgoDate = this.dateForApi.weekAgoDate;
   }
@@ -10,13 +10,16 @@ export default class NewsApi {
   sendRequest(query) {
     const url = `${this._url}q=${query}&language=ru&from=${this.weekAgoDate}&to=${this.nowDate}&sortBy=popularity&pageSize=100&apiKey=${this._apiKey}`;
     return fetch(url)
-        .then(status => {
-            if (status.ok) {
-              return status.json();
-            }
-        })
-        .then(data => {
-            return data.articles;
-        })
+      .then(status => {
+        if (status.ok) {
+          return status.json();
+        }
+      })
+      .then(data => {
+        return data.articles;
+      })
+      .catch(err => {
+        return console.log(err)
+      })
   }
 }

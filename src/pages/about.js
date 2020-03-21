@@ -7,12 +7,12 @@ import GitHubApi from '../modules/api/GitHubApi';
 import Commit from '../blocks/about/github/__swiper/__wrapper/__slide/commit';
 import CommitList from '../blocks/about/github/__swiper/__wrapper/commitList'
 
-const GIT_HUB_API = new GitHubApi ({
+const gitHubApi = new GitHubApi ({
   url: 'https://api.github.com/repos/QUNIX-X/NewsAnalyzer'
 })
 
-const DATE_CALC = () => new DateCalc;
-const COMMIT = new Commit;
-const COMMIT_LIST = new CommitList(document.querySelector('.swiper-wrapper'), COMMIT, GIT_HUB_API, DATE_CALC());
+const dateCalc = () => new DateCalc;
+const commit = new Commit;
+const commitList = new CommitList(document.querySelector('.swiper-wrapper'), commit, gitHubApi, dateCalc());
 
-COMMIT_LIST.render('/commits');
+commitList.render('/commits');

@@ -6,64 +6,60 @@ import Storage from '../modules/storage';
 import Validate from '../modules/validate'
 import Results from '../blocks/main/result/results';
 
-const SEARCH_FORM = document.querySelector('.search__field');
-const SEARCH_INPUT = document.querySelector('.search__input');
-const SEARCH_BUTTON = document.querySelector('.search__button');
-const CARD_LIST = document.querySelector('.result__cards');
-const BUTTON_SHOW_MORE = document.querySelector('.result__button');
+const searchForm = document.querySelector('.search__field');
+const searchButton = document.querySelector('.search__button');
 
-const CHECK_SEARCH = new CheckSearch(SEARCH_INPUT);
-const DATE_CALC = () => new DateCalc;
-const DATE_FOR_API = DATE_CALC().getDateForApi();
-const STORAGE = new Storage;
-const RESULTS = new Results(SEARCH_INPUT, SEARCH_BUTTON, CARD_LIST, BUTTON_SHOW_MORE);
+const buttonShowMore = document.querySelector('.result__button');
 
-const NEWS_API = new NewsApi ({
-  url:'https://newsapi.org/v2/everything?',
+const checkSearch = new CheckSearch;
+const dateCalc = () => new DateCalc;
+const dateForApi = dateCalc().getDateForApi();
+const storage = new Storage;
+const results = new Results(searchButton, buttonShowMore);
+
+const newsApi = new NewsApi ({
+  url: 'https://newsapi.org/v2/everything?',
   apiKey: '118eb65ee44d4f41b692570db5e71bd0'
-}, DATE_FOR_API);
+}, dateForApi);
 
-new Validate(SEARCH_FORM, SEARCH_INPUT, SEARCH_BUTTON);
+new Validate(searchForm, searchButton);
 
 const newsLoad = () => {
-  if (STORAGE.checkLocalstorage()) {
-    RESULTS.newsVisible();
-  if (STORAGE.load().length > 3) {
-    RESULTS.blockStyle(BUTTON_SHOW_MORE, '');
+  if (storage.checkLocalstorage()) {
+    results.newsVisible();
+  if (storage.load().length > 3) {
+    results.blockStyle(buttonShowMore, '');
   } else {
-    RESULTS.blockStyle(BUTTON_SHOW_MORE, 'none');
+    results.blockStyle(buttonShowMore, 'none');
   }
-    RESULTS.createCardsBlock(STORAGE.load(), DATE_CALC());
-  }
-}
-
-const CLEARING_STORAGE = () => {
-  localStorage.clear();
-  while (CARD_LIST.firstChild) {
-    CARD_LIST.firstChild.remove();
+    results.createCardsBlock(storage.load(), dateCalc());
   }
 }
 
-BUTTON_SHOW_MORE.addEventListener('click', () => RESULTS.showMore(STORAGE.load(), DATE_CALC()));
-
-SEARCH_BUTTON.addEventListener('click', () => {
-  let query = CHECK_SEARCH.validation();
-  if (query) {
-    console.log(CLEARING_STORAGE())
-    CLEARING_STORAGE();
-    RESULTS.newsLoading();
-    NEWS_API.sendRequest(query)
+const handlerSearchButton = () => {
+  let query = checkSearch.validation();
+  if (!!query) {
+    results.clearingStorage();
+    results.newsLoading();
+    newsApi.sendRequest(query)
         .then(data => {
           if (data.length === 0) {
-            RESULTS.newsEmpty();
+            results.newsEmpty();
           } else {
-            STORAGE.textQuery(query);
-            STORAGE.save(data);
+            storage.textQuery(query);
+            storage.save(data);
             newsLoad();
           }
         })
         .catch(() => {
-          RESULTS.newsError();
+          results.newsError();
         });
   }
-});
+};
+
+const handlerButtonShowMore = () => {
+  results.showMore(storage.load(), dateCalc())
+};
+
+searchButton.addEventListener('click', handlerSearchButton);
+buttonShowMore.addEventListener('click', handlerButtonShowMore);

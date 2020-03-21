@@ -1,9 +1,19 @@
 export default class CommitList {
-  constructor(container, COMMIT_TEMPLATE, GIT_HUB_API, DATE_CALC) {
+  constructor(container, commitTemplate, gitHubApi, dateCalc) {
     this.container = container;
-    this.commitTemplate = COMMIT_TEMPLATE;
-    this.gitHubApi = GIT_HUB_API;
-    this.dateCalc = DATE_CALC;
+    this.commitTemplate = commitTemplate;
+    this.gitHubApi = gitHubApi;
+    this.dateCalc = dateCalc;
+    this.gitHubLoading = document.querySelector('.github__loading');
+    this.apiError = document.querySelector('.github__api-error');
+    this.swiperContainer = document.querySelector('.swiper-container');
+  }
+
+  renderLoading(isLoading) {
+    if (!isLoading) {
+      this.gitHubLoading.style.display = 'none';
+      this.swiperContainer.style.display = 'block';
+    }
   }
 
   addCommit(name, email, date, message, avatar_url) {
@@ -13,17 +23,26 @@ export default class CommitList {
   }
 
   render(path) {
-    this.gitHubApi.getCommits(path).then(commits => {
-      for (let i = 0; i < commits.length; i++) {
-        let commit = commits[i];
-        if (commits[i] === 0) {
-          console.log('Коммиты не найдены')
+    this.gitHubApi.getCommits(path)
+      .then(commits => {
+        for (let i = 0; i < commits.length; i++) {
+          const commit = commits[i];
+          if (commit === 0) {
+            console.log('Коммиты не найдены')
+          }
+          this.addCommit(commit.commit.committer.email, commit.commit.committer.name, commit.commit.committer.date, commit.commit.message, commit.author.avatar_url);
+          if (commit <= 20) {
+            break;
+          }
         }
-        this.addCommit(commit.commit.committer.email, commit.commit.committer.name, commit.commit.committer.date, commit.commit.message, commit.author.avatar_url);//);
-        if (commits[i] <= 20) {
-          break;
-        }
-      }
-    })
+      })
+      .finally(() => {
+        this.renderLoading(false);
+      })
+      .catch(() => {
+        console.log('Ошибка: Не удалось получить ответ от API')
+        this.apiError.style.display = '';
+        this.swiperContainer.style.display = 'none';
+      });
   }
 }

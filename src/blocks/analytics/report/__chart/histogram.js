@@ -1,9 +1,9 @@
 import {TEXT_QUERY_REG} from '../../../../modules/queryReg';
 
 export default class Histogram {
-  constructor(DATE_CALC, STORAGE) {
-    this.dateCalc = DATE_CALC;
-    this.storage = STORAGE;
+  constructor(dateCalc, storage) {
+    this.dateCalc = dateCalc;
+    this.storage = storage;
     this.dataCaption = document.querySelector('.chart__data');
     this.daysWeek = document.querySelectorAll('.days__item');
     this.daysWeekGraph = document.querySelectorAll('.item__number');
@@ -14,6 +14,7 @@ export default class Histogram {
     this.dateForApi = this.dateCalc.getDateForApi();
     this.daysObject = this.dateCalc.getDayWeekData();
   }
+
   loadingHistogram() {
     this._diagramDataCaption();
     this._diagramMake();
@@ -22,7 +23,6 @@ export default class Histogram {
   _diagramDataCaption() {
     const nowMonth = this.dateCalc.captionAnalyticsData(this.dateForApi.nowDate);
     const weekAgoMonth = this.dateCalc.captionAnalyticsData(this.dateForApi.weekAgoDate);
-
     const reg = new RegExp(weekAgoMonth, 'gi');
     const matches = reg.test(nowMonth);
 
@@ -39,7 +39,9 @@ export default class Histogram {
     });
 
     this.daysWeekGraphArray.forEach((item, index) => {
+
       const count = this._queryObject()[`day${index}`];
+
       if (count === 0) {
           item.style.color = '#1A1B22';
       }
@@ -60,6 +62,7 @@ export default class Histogram {
 
     for (let i = 0; i < maxWeek; i++) {
         reg = new RegExp(this.daysObject[`day${i}`], 'gi');
+
         count = 0;
         this.storage.forEach((item) => {
             const date = new Date(item.publishedAt);
@@ -69,9 +72,7 @@ export default class Histogram {
             reg.lastIndex = 0;
             if (match) {
                 matchQueryItem = TEXT_QUERY_REG.test(item.title);
-
                 TEXT_QUERY_REG.lastIndex = 0;
-
                 if (matchQueryItem) {
                     count++;
                 }

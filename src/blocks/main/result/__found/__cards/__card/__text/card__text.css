@@ -2,6 +2,7 @@
   margin: 0 auto auto auto;
   width: 88%;
   min-height: 88px;
+  overflow: hidden;
 
   font-family: Roboto, Arial, Helvetica, sans-serif;;
   font-style: normal;
@@ -9,27 +10,4 @@
   font-size: 16px;
   line-height: 22px;
   color: #1A1B22;
-}
-
-.ellip {
-  display: block;
-  max-height: 120px;
-}
-
-.ellip-line {
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-
-.ellip,
-.ellip-line {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.more__cards {
-  display: none;
 }

@@ -1,17 +1,24 @@
-import ellipsis from '../../../modules/ellipsis';
+import CheckSearch from "../search/checkSearch";
 
-export default class Results {
-  constructor(SEARCH_INPUT, SEARCH_BUTTON, CARD_LIST, BUTTON_SHOW_MORE) {
-    this.searchInput = SEARCH_INPUT;
-    this.searchButton = SEARCH_BUTTON;
+export default class Results extends CheckSearch{
+  constructor( serchButton, buttonShowMore, searchInput) {
+    super(searchInput)
+    this.searchButton = serchButton;
     this.startPosition = 0;
     this.result = document.querySelector('.result');
     this.resultFound = document.querySelector('.result__found');
-    this.cardList = CARD_LIST;
-    this.buttonShowMore = BUTTON_SHOW_MORE;
+    this.cardList = document.querySelector('.result__cards');
+    this.buttonShowMore = buttonShowMore;
     this.resultLoading = document.querySelector('.result__loading');
     this.resultError = document.querySelector('.result__api-error');
     this.resultNotFound = document.querySelector('.result__not-found');
+  }
+
+  clearingStorage() {
+    localStorage.clear();
+    while (this.cardList.firstChild) {
+      this.cardList.firstChild.remove();
+    }
   }
 
   newsLoading() {
@@ -63,7 +70,10 @@ export default class Results {
 
   _createBlocks(cardData, dateCalcMas) {
     let checkUrl = new URL(cardData.url);
+    console.log(checkUrl.href)
     checkUrl.href = checkUrl.href.replace(/yandex.ru/, 'yandex.ru/news');
+    cardData.title = (cardData.title.length > 50) ? cardData.title.slice(0, 48) + "..." : cardData.title;
+    cardData.description = (cardData.description.length > 145) ? cardData.description.slice(0, 142) + "..." : cardData.description;
     const card = `
       <article class="result__card">
         <a href="${checkUrl.href}" target="_blank" class="card__link link"></a>
@@ -77,7 +87,6 @@ export default class Results {
       </article>
     `
     this.cardList.insertAdjacentHTML('beforeend', card);
-    ellipsis();
   }
 
   _sendData(cardData, dateCalcMas) {

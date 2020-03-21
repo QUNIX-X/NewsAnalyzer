@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>News Analyzer</title>
+  <meta name="description" content="Сайт для поиска наиболее популярных новостей за последнию неделю">
+  <meta name="author" content="QUNIX">
   <link href="<%=require('./images/favicon.ico')%>" rel="icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
@@ -67,7 +69,13 @@
     <section class="github">
       <h2 class="github__title">История коммитов из GitHub</h2>
       <a href="https://github.com/QUNIX-X/NewsAnalyzer/commits" target="_blank" class="github__link link">Открыть в Github</a>
-      <div class="github__api-error">
+      <div class="github__loading">
+        <div class="loading__spinner">
+          <div class="loading__inner"></div>
+        </div>
+        <p class="loading__text">Идет загрузка коммитов...</p>
+      </div>
+      <div class="github__api-error" style="display: none;">
         <h3 class="api-error__title">
             Api не отвечает
         </h3>

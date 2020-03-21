@@ -1,6 +1,7 @@
 export default class CheckSearch{
-  constructor(SEARCH_INPUT) {
-    this.searchInput = SEARCH_INPUT;
+  constructor() {
+    //this.searchInput = searchInput;
+    this.searchInput = document.querySelector('.search__input');
     this.regXSS = ['<', '>', '(', ')', ';', '=', '/', '.'];
     this.regSpacing = /\s+/g;
   }

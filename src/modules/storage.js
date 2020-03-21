@@ -1,4 +1,4 @@
-export default class Storage{
+export default class Storage {
 
   save(newsArray) {
     localStorage.setItem('answer', JSON.stringify(newsArray));
