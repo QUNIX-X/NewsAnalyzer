@@ -5,12 +5,12 @@ export default class Histogram {
     this.dateCalc = dateCalc;
     this.storage = storage;
     this.dataCaption = document.querySelector('.chart__data');
-    this.daysWeek = document.querySelectorAll('.days__item');
-    this.daysWeekGraph = document.querySelectorAll('.item__number');
-    this.lineGraph = document.querySelectorAll('.bars__item');
-    this.daysWeekArray = Array.from(this.daysWeek);
-    this.daysWeekGraphArray = Array.from(this.daysWeekGraph);
-    this.lineGraphArray = Array.from(this.lineGraph);
+    this.weeksDays = document.querySelectorAll('.days__item');
+    this.weeksDaysNumbers = document.querySelectorAll('.item__number');
+    this.bars = document.querySelectorAll('.bars__item');
+    this.weeksDaysArray = Array.from(this.weeksDays);
+    this.weeksDaysGraphArray = Array.from(this.weeksDaysNumbers);
+    this.barsArray = Array.from(this.bars);
     this.dateForApi = this.dateCalc.getDateForApi();
     this.daysObject = this.dateCalc.getDayWeekData();
   }
@@ -34,11 +34,11 @@ export default class Histogram {
   }
 
   _diagramMake() {
-    this.daysWeekArray.forEach((item, index) => {
+    this.weeksDaysArray.forEach((item, index) => {
       item.textContent = this.daysObject[`day${index}`];
     });
 
-    this.daysWeekGraphArray.forEach((item, index) => {
+    this.weeksDaysGraphArray.forEach((item, index) => {
 
       const count = this._queryObject()[`day${index}`];
 
@@ -46,10 +46,10 @@ export default class Histogram {
           item.style.color = '#1A1B22';
       }
       if (count > 0) {
-        this.lineGraphArray[index].style.minWidth = `12px`;
+        this.barsArray[index].style.minWidth = `12px`;
       }
       item.textContent = count;
-      this.lineGraphArray[index].style.width = `${count}%`;
+      this.barsArray[index].style.width = `${count}%`;
     });
   }
 

@@ -1,0 +1,7 @@
+@import url('./__avatar/author-about__avatar.css');
+
+.author-about__picture-container {
+  height: min-content;
+  width: min-content;
+  margin: 0 auto;
+}
