@@ -1,0 +1,13 @@
+.item__number {
+  margin: 0 0 0 6px;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
+  background: #2F71E5;
+}

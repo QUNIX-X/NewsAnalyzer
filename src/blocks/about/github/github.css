@@ -1,7 +1,9 @@
 @import url('./__title/github__title.css');
+@import url('./__swiper/swiper-default.css');
 @import url('./__swiper/swiper.css');
-@import url('./__swiper/my-swiper.css');
 @import url('./__link/github__link.css');
+@import url('./__error/github__api-error.css');
+@import url('./__loading/github__loading.css');
 
 .github {
   position: relative;

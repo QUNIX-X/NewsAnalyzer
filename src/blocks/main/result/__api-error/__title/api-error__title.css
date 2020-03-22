@@ -1,0 +1,20 @@
+.api-error__title {
+  margin: 24px 0 16px 0;
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+
+.api-error__title::before {
+  content: ':(';
+  position: absolute;
+  transform: rotate(90deg);
+  top: -25px;
+  left: 0;
+  right: 0;
+  font-size: 60px;
+  color: #B6BCBF;
+}

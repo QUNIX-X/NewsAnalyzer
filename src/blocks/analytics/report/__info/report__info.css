@@ -3,7 +3,7 @@
 @import url('./_bold/report__info_bold.css');
 
 .report__info {
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

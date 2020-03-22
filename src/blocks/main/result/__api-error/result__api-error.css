@@ -1,0 +1,11 @@
+@import url('./__text/api-error__text.css');
+@import url('./__title/api-error__title.css');
+
+.result__api-error {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}

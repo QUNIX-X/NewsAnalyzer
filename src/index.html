@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>News Analyzer</title>
+  <meta name="description" content="Сайт для поиска наиболее популярных новостей за последнию неделю">
+  <meta name="author" content="QUNIX">
   <link href="<%=require('./images/favicon.ico')%>" rel="icon" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
@@ -22,16 +24,16 @@
     <section class="search">
       <h1 class="search__title">Что в мире творится?</h1>
       <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-      <form action="#" class="search__field">
-        <input type="text" class="search__input" placeholder="Введите тему новости" minlength="3" maxlength="45" required>
-        <button type="submit" class="search__button">Искать</button>
+      <form class="search__field">
+        <input autocomplete="off" type="input" name="input" class="search__input" placeholder="Введите тему новости" minlength="3" maxlength="30" required>
+        <span id="error" class="search__error"></span>
+        <button type="submit" name="submit" class="search__button">Искать</button>
       </form>
       <img src="<%=require('./images/search__bg.jpg')%>" alt="здесь должна быть картинка :(" class="search__image">
       <div class="search__cover"></div>
     </section>
 
     <section class="result">
-
       <div class="result__loading">
         <div class="loading__spinner">
           <div class="loading__inner"></div>
@@ -45,85 +47,23 @@
         <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
       </div>
 
+      <div class="result__api-error">
+        <h3 class="api-error__title">
+            Api не отвечает
+        </h3>
+        <p class="api-error__text">
+          Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.
+        </p>
+      </div>
+
       <div class="result__found">
         <div class="result__row">
           <h2 class="result__title">Результаты поиска</h2>
           <a href="./analytics.html" class="result__link link">Посмотреть аналитику</a>
         </div>
 
-        <article class="result__cards">
-
-          <article class="result__card">
-            <a href="#" class="card__link  link"></a>
-            <div class="card__image-ratio">
-              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
-            </div>
-            <p class="card__time">2 августа 2019</p>
-            <h4 class="card__title">Национальное достояние – парки</h4>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-            <p class="card__caption">Лента.ру</p>
-          </article>
-
-          <article class="result__card">
-            <a href="#" class="card__link  link"></a>
-            <div class="card__image-ratio">
-              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
-            </div>
-            <p class="card__time">2 августа 2019</p>
-            <h4 class="card__title">Национальное достояние – парки</h4>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-            <p class="card__caption">Лента.ру</p>
-          </article>
-
-          <article class="result__card">
-            <a href="#" class="card__link  link"></a>
-            <div class="card__image-ratio">
-              <img src="<%=require('./images/item__img.jpg')%>" alt="Изображение не найдено" class="card__image">
-            </div>
-            <p class="card__time">2 августа 2019</p>
-            <h4 class="card__title">Национальное достояние – парки</h4>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-            <p class="card__caption">Лента.ру</p>
-          </article>
-
-          <div class="more__cards">
-
-            <article class="result__card">
-              <a href="#" class="card__link  link"></a>
-              <div class="card__image-ratio">
-                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
-              </div>
-              <p class="card__time">2 августа 2019</p>
-              <h4 class="card__title">Национальное достояние – парки</h4>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-              <p class="card__caption">Лента.ру</p>
-            </article>
-
-            <article class="result__card">
-              <a href="#" class="card__link  link"></a>
-              <div class="card__image-ratio">
-                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
-              </div>
-              <p class="card__time">2 августа 2019</p>
-              <h4 class="card__title">Национальное достояние – парки</h4>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-              <p class="card__caption">Лента.ру</p>
-            </article>
-
-            <article class="result__card">
-              <a href="#" class="card__link  link"></a>
-              <div class="card__image-ratio">
-                <img src="<%=require('./images/53-1.jpg')%>" alt="Изображение не найдено" class="card__image">
-              </div>
-              <p class="card__time">2 августа 2019</p>
-              <h4 class="card__title">Национальное достояние – парки</h4>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: годАмерика отмечала важный юбилей: годАмерика отмечала важный юбилей: году Америка отмечала важный юбилей: году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе. </p>
-              <p class="card__caption">Лента.ру</p>
-            </article>
-
-          </article>
-        </article>
-        <button class="result__button" id="showMore">Показать еще</button>
+        <article class="result__cards"></article>
+        <button class="result__button">Показать еще</button>
       </div>
     </section>
 

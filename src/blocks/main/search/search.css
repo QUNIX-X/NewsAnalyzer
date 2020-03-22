@@ -5,14 +5,20 @@
 @import url('./__title/search__title.css');
 
 .search {
-  margin: 30px auto 30px auto;
+  margin: 30px auto;
   padding: 0;
 }
 
 @media screen and (min-width: 600px) {
   .search {
     padding: 0 15%;
-    margin: 40px auto 40px auto;
+    margin: 40px auto;
+  }
+}
+
+@media screen and (min-width: 666px) {
+  .search {
+    margin: 80px auto;
   }
 }
 
@@ -20,7 +26,6 @@
   .search {
     width: 70%;
     padding: 0;
-    margin: 80px auto 80px auto;
   }
 }
 
