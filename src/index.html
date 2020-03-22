@@ -29,7 +29,15 @@
         <span id="error" class="search__error"></span>
         <button type="submit" name="submit" class="search__button">Искать</button>
       </form>
-      <img src="<%=require('./images/search__bg.jpg')%>" alt="здесь должна быть картинка :(" class="search__image">
+      <picture class="search__picture-container">
+        <source media="(min-width: 1366px)" srcset="<%=require('./images/search_bg-w1366.jpg')%>">
+        <source media="(min-width: 1050px)" srcset="<%=require('./images/search_bg-w1024.jpg')%>">
+        <source media="(min-width: 900px)" srcset="<%=require('./images/search_bg-w900.jpg')%>">
+        <source media="(min-width: 768px)" srcset="<%=require('./images/search_bg-w768.jpg')%>">
+        <source media="(min-width: 600px)" srcset="<%=require('./images/search_bg-w600.jpg')%>">
+        <source media="(max-width: 425px)" srcset="<%=require('./images/search_bg-w425.jpg')%>">
+        <img src="<%=require('./images/search__bg.jpg')%>" alt="здесь должна быть картинка :(" class="search__image">
+      </picture>
       <div class="search__cover"></div>
     </section>
 
@@ -69,14 +77,20 @@
 
     <section class="author-about">
       <div class="author-about__two-columns">
-        <img src="<%=require('./images/avatar.jpg')%>" alt="здесь должна быть картинка :(" class="author-about__avatar">
+        <picture class="author-about__picture-container">
+          <source media="(min-width: 1200px)" srcset="<%=require('./images/avatar-w464.jpg')%>">
+          <source media="(min-width: 1000px)" srcset="<%=require('./images/avatar-w364.jpg')%>">
+          <source media="(min-width: 550px)" srcset="<%=require('./images/avatar-w232.jpg')%>">
+          <source media="(max-width: 549px)" srcset="<%=require('./images/avatar-w272.jpg')%>">
+          <img src="<%=require('./images/avatar-w464.jpg')%>" alt="здесь должна быть картинка :(" class="author-about__avatar">
+        </picture>
         <div class="author-about__second-column">
           <h2 class="author-about__title">Об авторе</h2>
           <p class="author-about__text">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+            Меня зовут Даниил, я начинающий front-end developer. Прошел дистанционное обучение в Яндекс Практикуме.
           </p>
           <p class="author-about__text">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.
+            В проекте использовал следующий стек технологий: HTML, CSS, JavaScript, Wepback.
           </p>
         </div>
       </div>

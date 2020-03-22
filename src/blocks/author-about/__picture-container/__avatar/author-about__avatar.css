@@ -1,0 +1,10 @@
+.author-about__avatar {
+  border-radius: 50%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 550px) {
+  .author-about__avatar {
+    margin: auto 0;
+  }
+}
