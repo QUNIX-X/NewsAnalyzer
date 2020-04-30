@@ -20,7 +20,7 @@
   "homepage": "https://qunix-x.github.io/NewsAnalyzer/",
   "dependencies": {
     "babel-polyfill": "6.26.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "minimist": "^1.2.5",
     "swiper": "5.3.1"
   },
