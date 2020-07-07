@@ -17,9 +17,9 @@ const dateForApi = dateCalc().getDateForApi();
 const storage = new Storage;
 const results = new Results(searchButton, buttonShowMore);
 
-const newsApi = new NewsApi ({
+const newsApi = new NewsApi({
   url: 'https://newsapi.org/v2/everything?',
-  apiKey: '118eb65ee44d4f41b692570db5e71bd0'
+  apiKey: '43aa867f92f04d5e93e8285d2fc932d2'
 }, dateForApi);
 
 new Validate(searchForm, searchButton);
@@ -27,11 +27,11 @@ new Validate(searchForm, searchButton);
 const newsLoad = () => {
   if (storage.checkLocalstorage()) {
     results.newsVisible();
-  if (storage.load().length > 3) {
-    results.blockStyle(buttonShowMore, '');
-  } else {
-    results.blockStyle(buttonShowMore, 'none');
-  }
+    if (storage.load().length > 3) {
+      results.blockStyle(buttonShowMore, '');
+    } else {
+      results.blockStyle(buttonShowMore, 'none');
+    }
     results.createCardsBlock(storage.load(), dateCalc());
   }
 }
@@ -42,18 +42,18 @@ const handlerSearchButton = () => {
     results.clearingStorage();
     results.newsLoading();
     newsApi.sendRequest(query)
-        .then(data => {
-          if (data.length === 0) {
-            results.newsEmpty();
-          } else {
-            storage.textQuery(query);
-            storage.save(data);
-            newsLoad();
-          }
-        })
-        .catch(() => {
-          results.newsError();
-        });
+      .then(data => {
+        if (data.length === 0) {
+          results.newsEmpty();
+        } else {
+          storage.textQuery(query);
+          storage.save(data);
+          newsLoad();
+        }
+      })
+      .catch(() => {
+        results.newsError();
+      });
   }
 };
 
