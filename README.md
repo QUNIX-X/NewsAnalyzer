@@ -33,7 +33,7 @@
  
  - Страница с аналитикой. На ней отображается гистограмма популярности новостей.
  
- [![Watch the video](https://j.gifs.com/gZN4V3.gif)](https://youtu.be/RlHowYK48go)
+ [Watch the video](https://youtu.be/RlHowYK48go)
 
 ---
 ## Установка проекта
