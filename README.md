@@ -16,7 +16,7 @@
 В проекте использовал следующий стек технологий: HTML, CSS, JavaScript, Webpack, Git.
 
 Также использовались следующие api:
-  - [News API](https://newsapi.org) - Находит все статьи по запросу за последнюю неделю;
+  - [Google News API](https://gnews.io) - Находит все статьи по запросу за последнюю неделю;
   - [Github API](https://developer.github.com/v3/) - Находит последние 20 коммитов в этом проекте.
 
 Проекте использовался вендорный слайдер [Swiper](https://swiperjs.com).
