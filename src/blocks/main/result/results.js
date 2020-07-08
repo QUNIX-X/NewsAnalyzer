@@ -1,7 +1,7 @@
 import CheckSearch from "../search/checkSearch";
 
-export default class Results extends CheckSearch{
-  constructor( serchButton, buttonShowMore, searchInput) {
+export default class Results extends CheckSearch {
+  constructor(serchButton, buttonShowMore, searchInput) {
     super(searchInput)
     this.searchButton = serchButton;
     this.startPosition = 0;
@@ -78,7 +78,7 @@ export default class Results extends CheckSearch{
       <article class="result__card">
         <a href="${checkUrl.href}" target="_blank" class="card__link link"></a>
         <div class="card__image-ratio">
-          <img src="${cardData.urlToImage}" alt="Изображение не найдено" class="card__image">
+          <img src="${cardData.image}" alt="Изображение не найдено" class="card__image">
         </div>
         <p class="card__time">${dateCalcMas.convertDate(cardData.publishedAt)}</p>
         <h4 class="card__title">${cardData.title}</h4>
@@ -119,7 +119,7 @@ export default class Results extends CheckSearch{
     }
 
     if (storage.length > 3) {
-      for (let i = 0; i < 3; i ++) {
+      for (let i = 0; i < 3; i++) {
         this._sendData(storage[i], dateCalcMas);
       }
     } else {
