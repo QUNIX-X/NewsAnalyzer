@@ -18,8 +18,8 @@ const storage = new Storage;
 const results = new Results(searchButton, buttonShowMore);
 
 const newsApi = new NewsApi({
-  url: 'https://newsapi.org/v2/everything?',
-  apiKey: '43aa867f92f04d5e93e8285d2fc932d2'
+  url: 'https://gnews.io/api/v3/search?',
+  apiKey: 'f1846fccfe786210753ddce2079f14f2'
 }, dateForApi);
 
 new Validate(searchForm, searchButton);
