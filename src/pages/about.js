@@ -7,7 +7,7 @@ import GitHubApi from '../modules/api/GitHubApi';
 import Commit from '../blocks/about/github/__swiper/__wrapper/__slide/commit';
 import CommitList from '../blocks/about/github/__swiper/__wrapper/commitList'
 
-const gitHubApi = new GitHubApi ({
+const gitHubApi = new GitHubApi({
   url: 'https://api.github.com/repos/QUNIX-X/NewsAnalyzer'
 })
 

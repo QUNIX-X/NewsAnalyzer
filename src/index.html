@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,7 @@
   <link href="<%=require('./images/favicon.ico')%>" rel="icon" type="image/x-icon">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
+
 <body>
   <div class="root">
 
@@ -23,9 +25,11 @@
 
     <section class="search">
       <h1 class="search__title">Что в мире творится?</h1>
-      <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+      <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+        прошедшую неделю.</p>
       <form class="search__field">
-        <input autocomplete="off" type="input" name="input" class="search__input" placeholder="Введите тему новости" minlength="3" maxlength="30" required>
+        <input autocomplete="off" type="input" name="input" class="search__input" placeholder="Введите тему новости"
+          minlength="3" maxlength="30" required>
         <span id="error" class="search__error"></span>
         <button type="submit" name="submit" class="search__button">Искать</button>
       </form>
@@ -50,17 +54,18 @@
       </div>
 
       <div class="result__not-found">
-          <img src="<%=require('./images/not-found.svg')%>" alt=":(" class="not-found__image">
+        <img src="<%=require('./images/not-found.svg')%>" alt=":(" class="not-found__image">
         <h3 class="not-found__title">Ничего не найдено</h3>
         <p class="not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
       </div>
 
       <div class="result__api-error">
         <h3 class="api-error__title">
-            Api не отвечает
+          Api не отвечает
         </h3>
         <p class="api-error__text">
-          Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.
+          Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и
+          попробуйте ещё раз.
         </p>
       </div>
 
@@ -82,7 +87,8 @@
           <source media="(min-width: 1000px)" srcset="<%=require('./images/avatar-w364.jpg')%>">
           <source media="(min-width: 550px)" srcset="<%=require('./images/avatar-w232.jpg')%>">
           <source media="(max-width: 549px)" srcset="<%=require('./images/avatar-w272.jpg')%>">
-          <img src="<%=require('./images/avatar-w464.jpg')%>" alt="здесь должна быть картинка :(" class="author-about__avatar">
+          <img src="<%=require('./images/avatar-w464.jpg')%>" alt="здесь должна быть картинка :("
+            class="author-about__avatar">
         </picture>
         <div class="author-about__second-column">
           <h2 class="author-about__title">Об авторе</h2>
@@ -104,12 +110,15 @@
         <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link link">Яндекс.Практикум</a>
       </nav>
       <nav class="footer__container footer__container_second">
-        <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/github.svg')%>" alt="GitHub" class="footer__icon"></a>
-        <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img src="<%=require('./images/vk.svg')%>" alt="VK" class="footer__icon"></a>
+        <a href="https://github.com/QUNIX-X" target="_blank" class="footer__link footer__link_type_icon link"><img
+            src="<%=require('./images/github.svg')%>" alt="GitHub" class="footer__icon"></a>
+        <a href="https://vk.com/qnx_ui" target="_blank" class="footer__link footer__link_type_icon link"><img
+            src="<%=require('./images/vk.svg')%>" alt="VK" class="footer__icon"></a>
       </nav>
     </footer>
 
   </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
+
 </html>
